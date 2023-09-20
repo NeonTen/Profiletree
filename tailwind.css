@@ -1,0 +1,33 @@
+@import "css/tailwind-extra";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	[type='text'],
+	[type='email'],
+	[type='url'],
+	[type='password'],
+	[type='number'],
+	[type='date'],
+	[type='datetime-local'],
+	[type='month'],
+	[type='search'],
+	[type='tel'],
+	[type='time'],
+	[type='week'],
+	[multiple],
+	textarea,
+	select {
+		@apply w-full h-12 border-border-color focus:border-primary-color focus:outline-none focus:ring-primary-color placeholder:text-text-color text-text-color rounded px-5 py-2.5;
+	}
+	label {
+		@apply text-text-color;
+	}
+}
+@layer components {
+    .button {
+		@apply inline-flex justify-center items-center bg-primary-color hover:bg-hover-color transition ease-in text-white font-semibold rounded px-5 py-3 min-w-fit;
+    }
+}

@@ -1,0 +1,117 @@
+html,
+body {
+	@apply scroll-smooth;
+}
+body {
+	font-family: "Manrope", sans-serif;
+	@apply text-text-color dark:text-white dark:bg-d-body-color;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Darker Grotesque", sans-serif;
+	@apply font-semibold;
+}
+a {
+	@apply transition ease-linear;
+}
+section {
+	/* @apply overflow-hidden; */
+}
+p {
+	@apply text-text-color leading-relaxed dark:text-white;
+}
+
+.sub-menu::before {
+	@apply content-[''] bg-transparent w-full h-8 absolute -top-8 left-0;
+}
+.active-menu span:nth-child(2) {
+	@apply hidden;
+}
+.active-menu span:nth-child(1) {
+	@apply rotate-45 translate-y-1 origin-center;
+}
+.active-menu span:nth-child(3) {
+	@apply -rotate-45 -translate-y-1 origin-center;
+}
+
+/* Util */
+.gradient {
+	background: linear-gradient(
+		180deg,
+		rgba(8, 10, 19, 0) 29.35%,
+		rgba(0, 0, 0, 0.7) 100%
+	);
+}
+.wysiwyg-editor {
+	@apply grid;
+}
+
+.wysiwyg-editor h1,
+.wysiwyg-editor h2,
+.wysiwyg-editor h3,
+.wysiwyg-editor h4,
+.wysiwyg-editor h5,
+.wysiwyg-editor h6 {
+	@apply text-text-color font-medium leading-[1.1];
+}
+.wysiwyg-editor h1 {
+	@apply text-2xl lg:text-6xl;
+}
+.wysiwyg-editor h2 {
+	@apply text-2xl lg:text-5xl;
+}
+.wysiwyg-editor h3 {
+	@apply text-2xl lg:text-4xl;
+}
+.wysiwyg-editor h4 {
+	@apply text-2xl lg:text-3xl;
+}
+.wysiwyg-editor h5 {
+	@apply text-2xl;
+}
+.wysiwyg-editor h6 {
+	@apply text-xl;
+}
+.wysiwyg-editor blockquote,
+.wysiwyg-editor blockquote p {
+	@apply text-2xl font-medium italic py-5 text-center;
+}
+.wysiwyg-editor ul,
+.wysiwyg-editor ol {
+	@apply text-lg font-semibold list-outside pl-6;
+}
+.wysiwyg-editor ul {
+	@apply list-disc;
+}
+.wysiwyg-editor ol {
+	@apply list-decimal;
+}
+.wysiwyg-editor ul li,
+.wysiwyg-editor ol li {
+	@apply pl-4 my-3 leading-snug relative;
+}
+
+.wysiwyg-editor.dark * {
+	@apply text-white;
+}
+
+/* WP Forms */
+.wpforms-container .wpforms-hidden {
+	@apply hidden;
+}
+.wpforms-label-hide {
+	@apply hidden;
+}
+.wpforms-form {
+	@apply flex gap-2 max-w-[526px];
+}
+.wpforms-field-container {
+	@apply w-full;
+}
+.wpforms-form [type='email'] {
+	@apply w-full;
+}
